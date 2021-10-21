@@ -20,7 +20,6 @@ jobs:
       fullTeamName: '\CxServer'
       enableDependencyScan: true
       dependencyServerURL: 44c535be-58c8-4c1f-a5aa-780ff221a4da
-      dependencyAccessControlURL: https://abc.checkmarx.net
       dependencyTenant: Plugins
       scaTeam: '\CxServer'
 ...
