@@ -1,0 +1,23 @@
+resources:
+  repositories:
+  - repository: self
+    type: git
+    ref: master
+jobs:
+- job: Job_1
+  displayName: Agent job 1
+  pool:
+    name: Default
+  steps:
+  - checkout: self
+    clean: true
+  - task: Application security testing@2021
+    displayName: Application security testing
+    inputs:
+      projectName: NewPlugin_Project_With_NEWEP
+      enableSastScan: false
+      fullScansScheduled: false
+      enableDependencyScan: true
+      dependencyServerURL: 096b241c-7cab-4dfe-a3b4-1a96c19575ba
+      scaTeam: '\CxServer'
+...
