@@ -1,0 +1,24 @@
+steps:
+
+- task: ADOSSLCA.cxsast.cx-scan-task.Application security testing@2021
+
+  displayName: 'Application security testing'
+
+  inputs:
+
+    projectName: 'New_Project1'
+
+    CheckmarxService: 'SAST_98_QA'
+
+    fullTeamName: '\CxServer'
+
+    fullScansScheduled: false
+
+    enableDependencyScan: true
+
+    dependencyServerURL: ScaWithoutAgent
+
+    dependencyTenant: Plugins
+
+    scaTeam: '\CxServer'
+
