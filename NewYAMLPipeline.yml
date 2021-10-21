@@ -19,6 +19,5 @@ jobs:
       CheckmarxService: 929ae9ce-5340-4677-897c-6bfc53da82af
       fullTeamName: '\CxServer'
       enableDependencyScan: true
-      CheckmarxServiceForSca:
+      CheckmarxServiceForSca: 'ScaWithoutAgent_YAML'
       scaTeam: '\CxServer'
-...
