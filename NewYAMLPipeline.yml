@@ -16,8 +16,6 @@ jobs:
     inputs:
       projectName: New_Project1
       enableSastScan: false
-      CheckmarxService: 929ae9ce-5340-4677-897c-6bfc53da82af
-      fullTeamName: '\CxServer'
       enableDependencyScan: true
       CheckmarxServiceForSca: 'ScaWithoutAgent_YAML'
       scaTeam: '\CxServer'
