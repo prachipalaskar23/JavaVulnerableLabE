@@ -1,0 +1,22 @@
+resources:
+  repositories:
+  - repository: self
+    type: git
+    ref: master
+jobs:
+- job: Job_1
+  displayName: Agent job 1
+  pool:
+    name: Default
+  steps:
+  - checkout: self
+    clean: true
+  - task: Application security testing@2021
+    displayName: Application security testing
+    inputs:
+      projectName: New_PluginProject_WithEP
+      enableSastScan: false
+      fullScansScheduled: false
+      enableDependencyScan: true
+      dependencyServerURL: 44c535be-58c8-4c1f-a5aa-780ff221a4da
+...
