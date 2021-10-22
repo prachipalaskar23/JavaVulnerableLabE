@@ -1,0 +1,25 @@
+resources:
+  repositories:
+  - repository: self
+    type: git
+    ref: master
+jobs:
+- job: Job_1
+  displayName: Agent job 1
+  pool:
+    name: Default
+  steps:
+  - checkout: self
+    clean: true
+  - task: Application security testing@2021
+    displayName: Application security testing
+    inputs:
+      projectName: 'Pipeline1_SAST_SCA_89 '
+      CheckmarxService: 347b7bda-704c-4b8d-be9b-70e8523a646f
+      fullTeamName: '\CxServer'
+      incScan: false
+      enableDependencyScan: true
+      dependencyServerURL: 3a5525c4-15a6-47aa-99b2-370e73c8a7e2
+      dependencyTenant: Plugins
+      scaTeam: '\CxServer'
+...
