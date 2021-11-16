@@ -1,0 +1,25 @@
+resources:
+  repositories:
+  - repository: self
+    type: git
+    ref: master
+jobs:
+- job: Job_1
+  displayName: AgentNewJob
+  pool:
+    name: Default
+  steps:
+  - checkout: self
+  - task: Application security testing@2021
+    displayName: Application security testing
+    inputs:
+      projectName: NewProject_16Nov_enhancements
+      CheckmarxService: 929ae9ce-5340-4677-897c-6bfc53da82af
+      engineConfigId: 6
+      fullTeamName: '\CxServer'
+      incScan: false
+      fullScansScheduled: false
+      customfields: field1:value1,field2:value2
+      postScanAction: GitPull
+      avoidDuplicateScans: true
+...
